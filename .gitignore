@@ -1,0 +1,58 @@
+# Основные параметры .gitignore для Python-проекта
+
+# Виртуальные окружения
+venv/
+env/
+ENV/
+.venv/
+.pipenv/
+__pycache__/
+*.py[cod]
+
+# Логи
+logs/
+*.log
+
+# Конфигурационные файлы/ключи
+.env
+*.env
+
+# Кэш и временные файлы
+*.swp
+*.bak
+*.tmp
+*.~
+.DS_Store
+
+# IDE/редактор
+.idea/
+.vscode/
+
+# Сборка, журналы и Python bytecode
+build/
+dist/
+*.egg-info/
+*.eggs/
+*.coverage
+
+# Модули тестирования/отчёты
+htmlcov/
+.cache/
+.pytest_cache/
+coverage.xml
+nosetests.xml
+test-results.xml
+junit.xml
+
+# Сервисы и деплой
+*.sqlite3
+*.db
+
+# PyInstaller
+*.spec
+
+# OS специфичные файлы
+Thumbs.db
+
+# Миграции (если используете Django/Flask)
+migrations/
