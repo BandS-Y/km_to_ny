@@ -134,7 +134,7 @@ def register_handlers(app):
     app.add_handler(CommandHandler("start", start_cmd))
     app.add_handler(CommandHandler("help", help_cmd))
     # app.add_handler(CommandHandler("echo", echo_cmd))
-    app.add_handler(CommandHandler("echo", cities_cmd))
+    app.add_handler(CommandHandler("cities", cities_cmd))
     app.add_handler(CommandHandler("lang_ru", lang_ru_cmd))
     app.add_handler(CommandHandler("lang_en", lang_en_cmd))
     app.add_handler(get_ngdistance_conv_handler())
