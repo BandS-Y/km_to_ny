@@ -11,9 +11,9 @@ from bot.handlers import (
 )
 
 class TelegramBot:
-    TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+    TOKEN = os.getenv("BOT_TOKEN")
     if not TOKEN:
-        raise RuntimeError("TELEGRAM_BOT_TOKEN is not set")
+        raise RuntimeError("BOT_TOKEN is not set")
 
     def __init__(self, config):
         self.token = config['TOKEN']
