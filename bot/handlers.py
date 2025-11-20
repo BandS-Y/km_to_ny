@@ -53,6 +53,11 @@ async def echo_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(get_msg("echo_prefix", lang, text))
     logger.info(f"/echo user {update.effective_user.id}: {text}")
 
+async def cities_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    lang = get_user_lang(context)
+    logger.info(f"/help user {update.effective_user.id}")
+
+
 # --------------------------- #
 # Смена языка (команды)       #
 # --------------------------- #
@@ -128,7 +133,8 @@ def get_ngdistance_conv_handler():
 def register_handlers(app):
     app.add_handler(CommandHandler("start", start_cmd))
     app.add_handler(CommandHandler("help", help_cmd))
-    app.add_handler(CommandHandler("echo", echo_cmd))
+    # app.add_handler(CommandHandler("echo", echo_cmd))
+    app.add_handler(CommandHandler("echo", cities_cmd))
     app.add_handler(CommandHandler("lang_ru", lang_ru_cmd))
     app.add_handler(CommandHandler("lang_en", lang_en_cmd))
     app.add_handler(get_ngdistance_conv_handler())

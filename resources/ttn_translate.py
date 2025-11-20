@@ -1,5 +1,6 @@
 TRANSLATE = {
     "ru": {
+        "city": "Город",
         "current_time": "Текущее время",
         "new_year_left": "До Нового года",
         "latitude": "Широта",
@@ -11,6 +12,7 @@ TRANSLATE = {
         "manual_lat": "Ввести широту вручную"
     },
     "en": {
+        "city": "City",
         "current_time": "Current time",
         "new_year_left": "Time to New Year",
         "latitude": "Latitude",

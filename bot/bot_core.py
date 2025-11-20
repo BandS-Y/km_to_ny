@@ -7,7 +7,8 @@ from telegram.ext import (
 )
 from bot.handlers import (
     start_cmd, help_cmd, echo_cmd,
-    get_ngdistance_conv_handler
+    get_ngdistance_conv_handler,
+    cities_cmd
 )
 
 class TelegramBot:
@@ -29,7 +30,8 @@ class TelegramBot:
     def register_handlers(self):
         self.app.add_handler(CommandHandler("start", start_cmd))
         self.app.add_handler(CommandHandler("help", help_cmd))
-        self.app.add_handler(CommandHandler("echo", echo_cmd))
+        # self.app.add_handler(CommandHandler("echo", echo_cmd))
+        self.app.add_handler(CommandHandler("cities", cities_cmd))
         self.app.add_handler(get_ngdistance_conv_handler())
         logger.info("Обработчики команд зарегистрированы")
 

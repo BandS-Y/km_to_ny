@@ -78,6 +78,7 @@ def format_result(city, now, lang='ru'):
     surface_km = earth_rotation_distance(city["latitude"], seconds_left)
     total_km = orbit_km + surface_km
     return (
+        f'{TRANSLATE[lang]["city"]}: {city["name"]}\n'
         f'{TRANSLATE[lang]["current_time"]}: {now.strftime("%Y-%m-%d %H:%M:%S")}\n'
         f'{TRANSLATE[lang]["new_year_left"]}: {str(timedelta(seconds=int(seconds_left)))}\n'
         f'{TRANSLATE[lang]["latitude"]}: {city["latitude"]}\n'
