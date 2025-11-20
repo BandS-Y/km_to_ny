@@ -56,3 +56,5 @@ Thumbs.db
 
 # Миграции (если используете Django/Flask)
 migrations/
+/.gigaide/
+/.idea/

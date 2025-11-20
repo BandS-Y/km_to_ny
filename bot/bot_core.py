@@ -1,7 +1,9 @@
+import os
+
 from loguru import logger
-from telegram import Update
+# from telegram import Update
 from telegram.ext import (
-    Application, CommandHandler, ContextTypes
+    Application, CommandHandler #, ContextTypes
 )
 from bot.handlers import (
     start_cmd, help_cmd, echo_cmd,
@@ -9,6 +11,10 @@ from bot.handlers import (
 )
 
 class TelegramBot:
+    TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+    if not TOKEN:
+        raise RuntimeError("TELEGRAM_BOT_TOKEN is not set")
+
     def __init__(self, config):
         self.token = config['TOKEN']
         self.log_level = config['LOG_LEVEL']
