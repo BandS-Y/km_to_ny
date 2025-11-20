@@ -16,7 +16,7 @@ class TelegramBot:
         TOKEN = os.getenv("BOT_TOKEN")
         if not TOKEN:
             raise RuntimeError("BOT_TOKEN is not set")
-        self.token = config[TOKEN]
+        self.token = TOKEN
         self.log_level = config['LOG_LEVEL']
         self.log_file = config['LOG_FILE']
         self.app = Application.builder().token(self.token).build()
